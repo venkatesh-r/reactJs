@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #ccc;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-bar > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar li {
+  padding: 10 20px;
+  list-style: none;
+  font: 20px Arial, Helvetica, sans-serif;
+}
