@@ -19,9 +19,39 @@ const Header = () => {
     );
 }
 
+const Body = () => {
+    return (
+        <div>
+           <div className="search-container">Search</div>
+           <div className="card-container">
+               <Cardcontainer/>
+               <Cardcontainer/>
+           </div>
+        </div>
+    );
+}
+
+const Cardcontainer = () => {
+    return(
+        <div className="card-wrapper">
+         <img alt="restaurant-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/83650e6ca1465c58063a70ad22be4f28"/>
+         <h4>Ambur Star Biriyani</h4>
+         <span>Rating - 4.3 | 30 mins</span>
+         <div>
+            <span>Biriyani, South Indian</span>
+            <span>T.nagar</span>
+         </div>
+        </div>
+    );
+}
+
 const AppLayout = () => {
     return (
-        <Header/>
+        <>
+         <Header/>
+         <Body/>
+        </>
+        
     );
 };
 
