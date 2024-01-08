@@ -1,24 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-    return (
-        <div className="header">
-            <div className="logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxPIeEEhgJRQsNLtDeCKPgDoiT4Q0x_7k4w1UWLNaWcOn89smKWTHOHRMP03BCS-74hE8&usqp=CAU"></img>
-            </div>
-            <div className="nav-bar">
-                <ul>
-                  <li>Home</li> 
-                  <li>About</li>  
-                  <li>Contact</li>  
-                  <li>cart</li>     
-                </ul>
-            </div>
-        </div>
-    );
-}
-
 const restData =   {
     "cards": [
         {
@@ -780,53 +759,4 @@ const restData =   {
       ]
 }
 
-
-const Body = () => {
-    return (
-        <div>
-           <div className="search-container">Search</div>
-           <div className="card-container">
-               {restData.cards.map((val)=> {
-                  return <Cardcontainer resValue={val} key={val.card.info.id}/>
-               })}
-           </div>
-        </div>
-    );
-}
-
-
-
-const Cardcontainer = (props) => {
-    console.log(props +'test')
- const {resValue} = props;
- 
- const {cloudinaryImageId, name, costForTwo, avgRating, deliveryTime, areaName, cuisines} = resValue?.card.card.info;
-    
-    return(
-        <div className="card-wrapper">
-         <img alt="restaurant-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}/>
-         <h4>{name}</h4>
-         <span>Price: {costForTwo}</span>
-         <span>Rating - {avgRating} | {deliveryTime} mins</span>
-         <div>
-            <span>{cuisines.join(", ")}</span><br></br>
-            <span>{areaName}</span>
-         </div>
-        </div>
-    );
-}
-
-const AppLayout = () => {
-    return (
-        <>
-         <Header/>
-         <Body/>
-        </>
-        
-    );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
-root.render(<AppLayout/>);
+export default restData;
