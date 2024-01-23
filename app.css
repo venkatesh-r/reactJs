@@ -46,3 +46,16 @@
     padding: 3px 0;
  }
 
+ .shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .shimmer-card {
+    width: 200px;
+    border: solid 1px #000;
+    padding: 5px; 
+    margin: 5px 30px 20px 0;
+    height: 270px;
+ }
+

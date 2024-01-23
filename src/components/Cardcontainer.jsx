@@ -4,7 +4,7 @@ const Cardcontainer = (props) => {
     
     const {resValue} = props;
    
-    const {cloudinaryImageId, name, costForTwo, avgRating, deliveryTime, areaName, cuisines} = resValue?.card.info;
+    const {cloudinaryImageId, name, costForTwo, avgRating, deliveryTime, areaName, cuisines} = resValue?.card?.card.info;
 
     
 
