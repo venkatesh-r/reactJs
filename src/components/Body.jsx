@@ -21,13 +21,8 @@ const loadData = async () => {
    setuserRestaurant(json.data.cards.slice(3));
 };
 
-if(userRestaurant.length === 0) {
-   return <ShimmerUI/>
-}
-
-
-
-    return (
+    return( userRestaurant.length === 0 ? (
+      <ShimmerUI/>) : (
         <div>
            <div className="search-container">
              <button onClick={() => 
@@ -46,7 +41,8 @@ if(userRestaurant.length === 0) {
                })}
            </div>
         </div>
-    );
+    )
+    )
 }
 
 export default Body;
