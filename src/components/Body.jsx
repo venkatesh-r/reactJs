@@ -4,11 +4,9 @@ import ShimmerUI from "./ShimmerUI";
 /* import restData from "../utils/mockdata"; */
 
 const Body = () => {
-
 const [userRestaurant, setuserRestaurant] = useState([]);
-
-//console.log(userRestaurant)
-
+const [searchValue, setsearchValue] = useState([]);
+console.log(searchValue);
 useEffect(()=> {
    loadData();
 }, []);
@@ -24,17 +22,25 @@ const loadData = async () => {
     return( userRestaurant.length === 0 ? (
       <ShimmerUI/>) : (
         <div>
-           <div className="search-container">
-             <button onClick={() => 
-                {
-                   const filterRestaurant = restData.filter((fil) => fil.card.info.avgRating > 4)
-                   setuserRestaurant(filterRestaurant);
-                }
-                
-             }>Filter Reastaurant</button>
-             
-           </div>
-           
+         <div className="search-wrapper">
+            <div className="search-contaciner">
+               <input 
+               type="text" 
+               value={searchValue}
+               onChange={(e)=>{setsearchValue(e.target.value)}}
+               />
+               <button>Submit</button>
+            </div>
+            <div className="filter-container">
+               <button onClick={() => 
+                  {
+                     const filterRestaurant = restData.filter((fil) => fil.card.info.avgRating > 4)
+                     setuserRestaurant(filterRestaurant);
+                  }
+                  
+               }>Filter Reastaurant</button>
+            </div>
+         </div>
            <div className="card-container">
                {userRestaurant.map((val)=> {
                   return <Cardcontainer resValue={val} key={val.id}/>
