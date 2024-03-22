@@ -4,9 +4,11 @@ import ShimmerUI from "./ShimmerUI";
 /* import restData from "../utils/mockdata"; */
 
 const Body = () => {
+
 const [userRestaurant, setuserRestaurant] = useState([]);
+const [filteredRestaurant, setfilteredRestaurant] = useState([]);
 const [searchValue, setsearchValue] = useState([]);
-console.log(searchValue);
+
 useEffect(()=> {
    loadData();
 }, []);
@@ -15,8 +17,8 @@ const loadData = async () => {
    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0499711&lng=80.2121306&collection=83649&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
 
    const json = await data.json();
-   
    setuserRestaurant(json.data.cards.slice(3));
+   setfilteredRestaurant(json.data.cards.slice(3));
 };
 
     return( userRestaurant.length === 0 ? (
@@ -29,12 +31,19 @@ const loadData = async () => {
                value={searchValue}
                onChange={(e)=>{setsearchValue(e.target.value)}}
                />
-               <button>Submit</button>
+               <button onClick={()=>{
+                  const filteredCard = userRestaurant.filter((res) => 
+                  res.card.card.info.name.toLowerCase().includes(searchValue.toLowerCase())
+              );
+              setfilteredRestaurant(filteredCard);
+                   
+               }}>Search</button>
             </div>
             <div className="filter-container">
                <button onClick={() => 
                   {
-                     const filterRestaurant = restData.filter((fil) => fil.card.info.avgRating > 4)
+                     const filterRestaurant = userRestaurant.filter((fil) => fil.card.card.info.avgRating > 4)
+                     
                      setuserRestaurant(filterRestaurant);
                   }
                   
@@ -42,7 +51,7 @@ const loadData = async () => {
             </div>
          </div>
            <div className="card-container">
-               {userRestaurant.map((val)=> {
+               {filteredRestaurant.map((val)=> {
                   return <Cardcontainer resValue={val} key={val.id}/>
                })}
            </div>
