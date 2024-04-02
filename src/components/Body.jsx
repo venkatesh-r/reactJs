@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Cardcontainer from "./Cardcontainer";
 import ShimmerUI from "./ShimmerUI";
 /* import restData from "../utils/mockdata"; */
+import { Link } from "react-router-dom";
 
 const Body = () => {
 
@@ -52,7 +53,11 @@ const loadData = async () => {
          </div>
            <div className="card-container">
                {filteredRestaurant.map((val)=> {
-                  return <Cardcontainer resValue={val} key={val.id}/>
+                  return <Link
+                        key={val.id}
+                        to={"/restaurantmenu/"+val.card.card.info.id}>
+                      <Cardcontainer resValue={val} key={val.id}/>
+                  </Link>
                })}
            </div>
         </div>
