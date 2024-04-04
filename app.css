@@ -1,3 +1,7 @@
+p {
+  margin: 0;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,10 +74,14 @@
 
  .dish-wrapper {
    border-bottom: solid 1px #cccccc;
-   padding-bottom: 20px;
+   padding: 20px 0;
    margin-bottom: 20px;
    display: flex;
    margin: 0 15px;
+ }
+
+ .dish-wrapper h3 {
+   margin: 10px 0;
  }
 
  .dish-wrapper .details {

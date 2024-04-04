@@ -9,7 +9,7 @@ const RestaurantDish = (props) => {
         <>
          <div className="dish-wrapper">
             <div className="details">
-                <p className="variety">{vegClassifier}</p>
+                <p className="variety" style={{color: vegClassifier === "NONVEG" ? 'red' : 'green'}}>{vegClassifier}</p>
                 <h3>{name}</h3>
                 <span>Rating: {rating}</span> |  <span>Price: {price/100}</span>
                 <p>{description}</p>
