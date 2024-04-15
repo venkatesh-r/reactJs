@@ -6,12 +6,12 @@ import { LOGO_URL } from '../utils/constants';
 const Header = () => {
 const [loginBtn, setLoginBtn] = useState("Login");
     return (
-        <div className="header">
-            <div className="logo">
+        <div className="flex justify-between m-3">
+            <div className="w-24">
                 <img src={LOGO_URL}></img>
             </div>
             <div className="nav-bar">
-                <ul>
+                <ul className='flex p-4 m-4'>
                   <li>
                     <Link to="/">Home</Link>
                   </li> 
