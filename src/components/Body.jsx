@@ -25,14 +25,15 @@ const loadData = async () => {
     return( userRestaurant.length === 0 ? (
       <ShimmerUI/>) : (
         <div>
-         <div className="search-wrapper">
-            <div className="search-contaciner">
+         <div className="flex">
+            <div className="px-2 my-2">
                <input 
                type="text" 
                value={searchValue}
                onChange={(e)=>{setsearchValue(e.target.value)}}
+               className="border border-black p-2"
                />
-               <button onClick={()=>{
+               <button className="m-2 bg-gray-200 py-2 px-4" onClick={()=>{
                   const filteredCard = userRestaurant.filter((res) => 
                   res.card.card.info.name.toLowerCase().includes(searchValue.toLowerCase())
               );
@@ -40,8 +41,8 @@ const loadData = async () => {
                    
                }}>Search</button>
             </div>
-            <div className="filter-container">
-               <button onClick={() => 
+            <div className="my-2">
+               <button className="my-2 bg-gray-200 py-2 px-4" onClick={() => 
                   {
                      const filterRestaurant = userRestaurant.filter((fil) => fil.card.card.info.avgRating > 4)
                      
@@ -51,7 +52,7 @@ const loadData = async () => {
                }>Filter Reastaurant</button>
             </div>
          </div>
-           <div className="card-container">
+           <div className="flex flex-wrap">
                {filteredRestaurant.map((val)=> {
                   return <Link
                         key={val.id}

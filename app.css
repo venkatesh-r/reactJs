@@ -1,4 +1,11 @@
-p {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* p {
   margin: 0;
 }
 
@@ -68,11 +75,11 @@ p {
    margin: 20px 0;
    flex-direction: row;
    flex-flow: row;
- }
+ }*/
 
  /*Dish Details*/
 
- .dish-wrapper {
+ /*.dish-wrapper {
    border-bottom: solid 1px #cccccc;
    padding: 20px 0;
    margin-bottom: 20px;
@@ -87,7 +94,7 @@ p {
  .dish-wrapper .details {
    width: 70%;
    margin-right: 30px;
- }
+ }*/
 
  .dish-wrapper .details .variety {
    

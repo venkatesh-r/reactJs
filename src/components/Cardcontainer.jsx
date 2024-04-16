@@ -7,14 +7,14 @@ const Cardcontainer = (props) => {
     const {cloudinaryImageId, name, costForTwo, avgRating, deliveryTime, areaName, cuisines} = resValue?.card?.card.info;
        
        return(
-           <div className="card-wrapper">
-            <img alt="restaurant-logo" src={ IMAGE_URL + cloudinaryImageId}/>
-            <h4>{name}</h4>
-            <span>Price: {costForTwo}</span>
-            <span>Rating - {avgRating} | {deliveryTime} mins</span>
+           <div className="p-3 m-3 w-[270px] bg-gray-200">
+            <img className="w-[250] h-[220]" alt="restaurant-logo" src={ IMAGE_URL + cloudinaryImageId}/>
+            <h4 className='font-bold pt-2 pb-3'>{name}</h4>
+            <p>Price: {costForTwo}</p>
+            <p>Rating - {avgRating} | {deliveryTime} mins</p>
             <div>
-               <span>{cuisines.join(", ")}</span><br></br>
-               <span>{areaName}</span>
+               <p>{cuisines.join(", ")}</p>
+               <p>{areaName}</p>
             </div>
            </div>
        );

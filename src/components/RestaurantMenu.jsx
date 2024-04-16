@@ -14,7 +14,7 @@ const ReastaurantMenu = () => {
 
     return (
         <>
-          <h1>{text}</h1>
+          <h1 className="font-bold text-3xl m-2">{text}</h1>
             {itemCards.map((res) =>
                <RestaurantDish resVal={res}/>
              )} 
