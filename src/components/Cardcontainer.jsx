@@ -18,6 +18,20 @@ const Cardcontainer = (props) => {
             </div>
            </div>
        );
-   }
+};
+
+//high order component
+
+export const RestaurantPromotion = (Cardcontainer) => {
+    return (props) => {
+        return (
+            <>
+              <label>Promotion</label>
+              <Cardcontainer {...props}/>
+            </>
+            
+        )
+    }
+}
 
 export default Cardcontainer;
