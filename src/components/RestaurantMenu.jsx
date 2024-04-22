@@ -1,6 +1,7 @@
 import ShimmerUI from "./ShimmerUI";
 import { useParams } from "react-router-dom";
 import RestaurantDish from "./RestaurantDish";
+import ReastaurantCategory from "./ReastaurantCategory";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const ReastaurantMenu = () => {
@@ -26,13 +27,12 @@ const ReastaurantMenu = () => {
       }
     );
 
-  console.log(itemCategory);
-
   return (
     <>
       <h1 className="font-bold text-3xl m-2">{text}</h1>
-      {itemCards.map((res) => (
-        <RestaurantDish resVal={res} />
+
+      {itemCategory.map((val) => (
+        <ReastaurantCategory datalist={val?.card?.card} />
       ))}
     </>
   );
