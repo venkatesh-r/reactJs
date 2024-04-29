@@ -29,7 +29,7 @@ const ReastaurantMenu = () => {
 
   return (
     <>
-      <h1 className="font-bold text-3xl m-2">{text}</h1>
+      <h1 className="font-bold text-3xl m-4">{text}</h1>
 
       {itemCategory.map((val) => (
         <ReastaurantCategory datalist={val?.card?.card} />
