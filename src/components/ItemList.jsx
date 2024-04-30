@@ -1,19 +1,36 @@
+import { DISH_IMG } from "../utils/constants.js";
+
 const ItemList = ({ list }) => {
   console.log(list);
   return (
-    <>
+    <div>
       {list.map((items) => (
-        <div className="my-2 py-4 border-b border-indigo-500">
-          <h3 className=" font-semibold">{items.card.info.name}</h3>
-          <p>Price: {items?.card.info.price / 100}</p>
-          <p>
-            {items?.card.info.ratings.aggregatedRating.rating} (
-            {items?.card.info.ratings.aggregatedRating.ratingCountV2})
-          </p>
-          <p>{items?.card.info.description}</p>
+        <div
+          key={items?.card?.info?.id}
+          className="my-2 py-3 border-b border-gray-300 flex justify-between"
+        >
+          <div>
+            <h3 className=" font-semibold">{items.card.info.name}</h3>
+            <p className="py-1">Price: {items?.card.info.price / 100}</p>
+            {items?.card?.info?.ratings?.aggregatedRating?.rating && (
+              <p>
+                {items?.card?.info?.ratings?.aggregatedRating?.rating} (
+                {items?.card.info.ratings.aggregatedRating.ratingCountV2})
+              </p>
+            )}
+            <p className="pt-4">{items?.card.info.description}</p>
+          </div>
+          <div>
+            {items?.card?.info.imageId && (
+              <img
+                className="w-32 object-cover rounded-md"
+                src={DISH_IMG + items?.card?.info.imageId}
+              />
+            )}
+          </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
