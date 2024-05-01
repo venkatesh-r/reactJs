@@ -1,11 +1,9 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const ReastaurantCategory = ({ datalist }) => {
-  const [showlist, setshowlist] = useState(false);
+const ReastaurantCategory = ({ datalist, showlist, setShowIndex }) => {
   const dishAccordion = () => {
-    setshowlist(!showlist);
+    setShowIndex();
   };
 
   return (
