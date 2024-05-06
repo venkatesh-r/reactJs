@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import userContext from "../utils/userContext.js";
 import Cardcontainer, { RestaurantPromotion } from "./Cardcontainer";
 import ShimmerUI from "./ShimmerUI";
 /* import restData from "../utils/mockdata"; */
@@ -8,6 +9,8 @@ const Body = () => {
   const [userRestaurant, setuserRestaurant] = useState([]);
   const [filteredRestaurant, setfilteredRestaurant] = useState([]);
   const [searchValue, setsearchValue] = useState([]);
+
+  const { loggedInUser, setUserName } = useContext(userContext);
 
   const RestaurantCardPromoted = RestaurantPromotion(Cardcontainer);
 
@@ -66,6 +69,15 @@ const Body = () => {
           >
             Filter Reastaurant
           </button>
+        </div>
+
+        <div className="my-2">
+          Username:{" "}
+          <input
+            type="username"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
       </div>
       <div className="flex flex-wrap">
