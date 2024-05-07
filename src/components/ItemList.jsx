@@ -27,6 +27,13 @@ const ItemList = ({ list }) => {
                 src={DISH_IMG + items?.card?.info.imageId}
               />
             )}
+            <button
+              className=" px-5 py-3 border-slate-200
+             bg-white shadow-md text-[#1BA672] 
+            rounded-md ml-5"
+            >
+              Add
+            </button>
           </div>
         </div>
       ))}
