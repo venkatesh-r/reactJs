@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
+import { useSelector } from "react-redux";
 import { LOGO_URL } from "../utils/constants";
 import userContext from "../utils/userContext";
 
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
   const { loggedInUser } = useContext(userContext);
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
+
   return (
     <div className="flex justify-between bg-gray-100">
       <div className="w-24">
