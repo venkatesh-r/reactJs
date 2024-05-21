@@ -1,7 +1,15 @@
 import { DISH_IMG } from "../utils/constants.js";
+import { addItem } from "../utils/cartSlice.js";
+import { useDispatch } from "react-redux";
 
 const ItemList = ({ list }) => {
-  console.log(list);
+  const dispatch = useDispatch();
+
+  const handleAddItem = () => {
+    //Dispatch action
+    dispatch(addItem("Pizza"));
+  };
+
   return (
     <div>
       {list.map((items) => (
@@ -28,6 +36,7 @@ const ItemList = ({ list }) => {
               />
             )}
             <button
+              onClick={handleAddItem}
               className=" px-5 py-3 border-slate-200
              bg-white shadow-md text-[#1BA672] 
             rounded-md ml-5"

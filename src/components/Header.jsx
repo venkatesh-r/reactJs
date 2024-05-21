@@ -3,10 +3,13 @@ import { useContext, useState } from "react";
 import { useSelector } from "react-redux";
 import { LOGO_URL } from "../utils/constants";
 import userContext from "../utils/userContext";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Header = () => {
   const [loginBtn, setLoginBtn] = useState("Login");
   const { loggedInUser } = useContext(userContext);
+
+  //Subscribing to the store using a selector
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
 
@@ -29,7 +32,10 @@ const Header = () => {
           <li className="px-4">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className="px-4">cart</li>
+          <li className="px-4">
+            <ShoppingCartIcon />
+            {cartItems.length}
+          </li>
           <button
             onClick={() => {
               loginBtn === "Login"
