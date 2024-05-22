@@ -33,7 +33,9 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li className="px-4">
-            <ShoppingCartIcon />
+            <Link to="/cart">
+              <ShoppingCartIcon />
+            </Link>
             {cartItems.length}
           </li>
           <button
