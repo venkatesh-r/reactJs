@@ -24,8 +24,11 @@ const Cart = () => {
             Clear Cart
           </button>
         ) : (
-          ""
+          <h2 className=" text-center font-bold">
+            Your cart is empty add items
+          </h2>
         )}
+
         <ItemList list={cartItems} />
       </div>
     </div>
