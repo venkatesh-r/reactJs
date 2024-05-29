@@ -16,3 +16,6 @@
 5. configure Parcel config file to disable babel transcription
 6. jest -jest --init
 7. install jest-environment-jsdom
+8. install @babel/preset-react - to make jsx work in test cases
+9. Include @babel/preset-react inside my babel config
+10. Install @testing-library/jest-dom
