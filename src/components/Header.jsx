@@ -11,7 +11,6 @@ const Header = () => {
 
   //Subscribing to the store using a selector
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
 
   return (
     <div className="flex justify-between bg-gray-100">
@@ -36,7 +35,7 @@ const Header = () => {
             <Link to="/cart">
               <ShoppingCartIcon />
             </Link>
-            {cartItems.length}
+            {cartItems.length + "-items"}
           </li>
           <button
             onClick={() => {
