@@ -3,6 +3,8 @@ import { IMAGE_URL } from "../utils/constants";
 const Cardcontainer = (props) => {
   const { resValue } = props;
 
+  console.log(resValue);
+
   const {
     cloudinaryImageId,
     name,
@@ -11,7 +13,7 @@ const Cardcontainer = (props) => {
     deliveryTime,
     areaName,
     cuisines,
-  } = resValue?.card?.card.info;
+  } = resValue;
 
   return (
     <div className="p-3 m-3 w-[270px] bg-gray-200">

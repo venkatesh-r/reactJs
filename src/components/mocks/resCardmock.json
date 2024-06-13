@@ -1,0 +1,65 @@
+{
+  "id": "292407",
+  "name": "Yaa Mohaideen Biryani",
+  "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/24/6eba5350-96fb-433a-bd95-9e240a4f7057_c353621f-4e15-43e2-935b-ae2129c84448.jpg",
+  "locality": "Vadapalani",
+  "areaName": "Vadapalani",
+  "costForTwo": "₹500 for two",
+  "cuisines": ["Biryani", "Indian", "Grill", "Chinese"],
+  "avgRating": 4.2,
+  "parentId": "21813",
+  "avgRatingString": "4.2",
+  "totalRatingsString": "5K+",
+  "sla": {
+    "deliveryTime": 19,
+    "lastMileTravel": 0.9,
+    "serviceability": "SERVICEABLE",
+    "slaString": "15-20 mins",
+    "lastMileTravelString": "0.9 km",
+    "iconType": "ICON_TYPE_EMPTY"
+  },
+  "availability": {
+    "nextCloseTime": "2024-06-14 02:00:00",
+    "opened": true
+  },
+  "badges": {},
+  "isOpen": true,
+  "type": "F",
+  "badgesV2": {
+    "entityBadges": {
+      "textBased": {},
+      "imageBased": {},
+      "textExtendedBadges": {}
+    }
+  },
+  "aggregatedDiscountInfoV3": {
+    "header": "10% OFF",
+    "subHeader": "UPTO ₹40"
+  },
+  "orderabilityCommunication": {
+    "title": {},
+    "subTitle": {},
+    "message": {},
+    "customIcon": {}
+  },
+  "differentiatedUi": {
+    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+    "differentiatedUiMediaDetails": {
+      "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+      "lottie": {},
+      "video": {}
+    }
+  },
+  "reviewsSummary": {},
+  "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+  "restaurantOfferPresentationInfo": {},
+  "externalRatings": {
+    "aggregatedRating": {
+      "rating": "3.4",
+      "ratingCount": "1K+"
+    },
+    "source": "GOOGLE",
+    "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+  },
+  "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}
