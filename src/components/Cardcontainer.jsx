@@ -13,7 +13,7 @@ const Cardcontainer = (props) => {
     deliveryTime,
     areaName,
     cuisines,
-  } = resValue;
+  } = resValue.card.card.info;
 
   return (
     <div className="p-3 m-3 w-[270px] bg-gray-200">

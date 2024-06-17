@@ -1,65 +1,79 @@
 {
-  "id": "292407",
-  "name": "Yaa Mohaideen Biryani",
-  "cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/24/6eba5350-96fb-433a-bd95-9e240a4f7057_c353621f-4e15-43e2-935b-ae2129c84448.jpg",
-  "locality": "Vadapalani",
-  "areaName": "Vadapalani",
-  "costForTwo": "₹500 for two",
-  "cuisines": ["Biryani", "Indian", "Grill", "Chinese"],
-  "avgRating": 4.2,
-  "parentId": "21813",
-  "avgRatingString": "4.2",
-  "totalRatingsString": "5K+",
-  "sla": {
-    "deliveryTime": 19,
-    "lastMileTravel": 0.9,
-    "serviceability": "SERVICEABLE",
-    "slaString": "15-20 mins",
-    "lastMileTravelString": "0.9 km",
-    "iconType": "ICON_TYPE_EMPTY"
-  },
-  "availability": {
-    "nextCloseTime": "2024-06-14 02:00:00",
-    "opened": true
-  },
-  "badges": {},
-  "isOpen": true,
-  "type": "F",
-  "badgesV2": {
-    "entityBadges": {
-      "textBased": {},
-      "imageBased": {},
-      "textExtendedBadges": {}
-    }
-  },
-  "aggregatedDiscountInfoV3": {
-    "header": "10% OFF",
-    "subHeader": "UPTO ₹40"
-  },
-  "orderabilityCommunication": {
-    "title": {},
-    "subTitle": {},
-    "message": {},
-    "customIcon": {}
-  },
-  "differentiatedUi": {
-    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-    "differentiatedUiMediaDetails": {
-      "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-      "lottie": {},
-      "video": {}
-    }
-  },
-  "reviewsSummary": {},
-  "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-  "restaurantOfferPresentationInfo": {},
-  "externalRatings": {
-    "aggregatedRating": {
-      "rating": "3.4",
-      "ratingCount": "1K+"
+  "card": {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+      "info": {
+        "id": "78453",
+        "name": "Salem RR Biriyani Unavagam",
+        "cloudinaryImageId": "9474bd2e1c952bc131f9c5dbfa7d2139",
+        "locality": "GN Chetty Road",
+        "areaName": "T. Nagar",
+        "costForTwo": "₹400 for two",
+        "cuisines": ["Biryani", "Chettinad", "Tandoor", "Chinese"],
+        "avgRating": 3.8,
+        "parentId": "176137",
+        "avgRatingString": "3.8",
+        "totalRatingsString": "10K+",
+        "promoted": true,
+        "adTrackingId": "cid=14473173~p=4~adgrpid=14473173#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=78453~eid=20eee33c-c63d-4e6f-b90a-e7bcc47794c2~srvts=1718559549158~collid=83649",
+        "sla": {
+          "deliveryTime": 24,
+          "lastMileTravel": 3.9,
+          "serviceability": "SERVICEABLE",
+          "slaString": "20-25 mins",
+          "lastMileTravelString": "3.9 km",
+          "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+          "nextCloseTime": "2024-06-16 23:45:00",
+          "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "aggregatedDiscountInfoV2": {},
+        "type": "F",
+        "badgesV2": {
+          "entityBadges": {
+            "textBased": {},
+            "imageBased": {},
+            "textExtendedBadges": {}
+          }
+        },
+        "orderabilityCommunication": {
+          "title": {},
+          "subTitle": {},
+          "message": {},
+          "customIcon": {}
+        },
+        "differentiatedUi": {
+          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+          "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+          }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+          "aggregatedRating": {
+            "rating": "--"
+          }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+      },
+      "analytics": {},
+      "cta": {
+        "link": "swiggy://menu?restaurant_id=78453&source=collection&query=Biryani",
+        "text": "RESTAURANT_MENU",
+        "type": "DEEPLINK"
+      },
+      "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
     },
-    "source": "GOOGLE",
-    "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-  },
-  "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    "relevance": {
+      "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+      "sectionId": "MENU_RETURN_FOOD"
+    }
+  }
 }
