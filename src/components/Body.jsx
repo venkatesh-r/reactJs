@@ -90,7 +90,7 @@ const Body = () => {
               {val.card.card.info.promoted ? (
                 <RestaurantCardPromoted resValue={val} />
               ) : (
-                <Cardcontainer resValue={card.card.info} key={val.id} />
+                <Cardcontainer resValue={val} key={val.id} />
               )}
             </Link>
           );
