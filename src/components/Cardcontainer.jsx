@@ -16,7 +16,7 @@ const Cardcontainer = (props) => {
   } = resValue.card.card.info;
 
   return (
-    <div className="p-3 m-3 w-[270px] bg-gray-200">
+    <div data-testid="resCard" className="p-3 m-3 w-[270px] bg-gray-200">
       <img
         className="w-[250] h-[220]"
         alt="restaurant-logo"
