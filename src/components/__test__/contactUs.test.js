@@ -4,6 +4,10 @@ import "@testing-library/jest-dom";
 
 // group of test cases
 describe("contact page test cases", () => {
+  beforeAll(() => {
+    console.log("Before All");
+  });
+
   it("Contact page", () => {
     render(<Contact />);
     //Quering

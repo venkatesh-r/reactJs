@@ -3,8 +3,6 @@ import { IMAGE_URL } from "../utils/constants";
 const Cardcontainer = (props) => {
   const { resValue } = props;
 
-  console.log(resValue);
-
   const {
     cloudinaryImageId,
     name,
